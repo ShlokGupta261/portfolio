@@ -1,71 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
 
-    // Typing Effect for Hero Section
-    const roles = [
-        "a Cybersecurity Engineer.",
-        "an Information Security Analyst.",
-        "a Risk Management Professional.",
-        "an ISO 27001 Lead Auditor."
-    ];
-    let roleIndex = 0;
-    let charIndex = 0;
-    const typingElement = document.getElementById('typing-effect');
-    let isDeleting = false;
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent default anchor click behavior
+            e.preventDefault();
 
-    function type() {
-        const currentRole = roles[roleIndex];
-        let currentText = '';
+            // Get the target element's id from the href attribute
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-        if (isDeleting) {
-            currentText = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            currentText = currentRole.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        typingElement.textContent = currentText;
-
-        let typeSpeed = 150;
-        if (isDeleting) {
-            typeSpeed /= 2;
-        }
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            typeSpeed = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            typeSpeed = 500;
-        }
-
-        setTimeout(type, typeSpeed);
-    }
-
-    type();
-
-
-    // Fade-in on Scroll Animation
-    const sections = document.querySelectorAll('.content-section');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+            // Smoothly scroll to the target element
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
     });
-
 });
