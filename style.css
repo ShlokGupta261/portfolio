@@ -84,6 +84,7 @@ nav .container {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
+    display: inline-block;
 }
 
 .btn-primary {
@@ -147,6 +148,10 @@ section {
 }
 
 /* --- About Section --- */
+.about-section {
+    padding-top: 4rem;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
