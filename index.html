@@ -3,121 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shlok Gupta - Professional Portfolio</title>
+    <title>Shlok Gupta - Cybersecurity Professional</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            [cite_start]<a href="#home" class="nav-logo">Shlok Gupta [cite: 1]</a>
-            <ul>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">SHLOK GUPTA</a>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="btn btn-primary">Contact</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <div class="header-content">
+                <h1>Cybersecurity, Risk & Compliance</h1>
+                <p class="subtitle">A dedicated professional with 3+ years of experience in information security audit and risk management. I design and test internal controls against frameworks like ISO 27001, PCI-DSS, and NIST to mitigate risk and ensure compliance.</p>
+                <div class="header-buttons">
+                    <a href="Shlok Gupta - Resume Gen 8.pdf" class="btn btn-primary" target="_blank">Download Resume <i class="fas fa-download"></i></a>
+                    <a href="https://www.linkedin.com/in/shlokgupta261/" class="btn btn-secondary" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-text">
-                [cite_start]<h1>Hi, I'm Shlok Gupta [cite: 1]</h1>
-                <p>I am <span id="typing-effect"></span></p>
-                [cite_start]<p class="hero-bio">A dedicated cybersecurity professional with 3+ years of experience in information security audit and risk management[cite: 3]. [cite_start]I specialize in designing and testing internal controls against frameworks like ISO 27001, PCI-DSS, and NIST to mitigate risk and ensure compliance[cite: 4].</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="Shlok Gupta - Resume Gen 8.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="content-section">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-container">
-                <img src="[LINK_TO_YOUR_PHOTO]" alt="A professional headshot of Shlok Gupta" class="about-photo">
-                <div class="about-text">
-                    <p>Hello! [cite_start]I'm Shlok, a cybersecurity professional currently completing my Master's in Cybersecurity Engineering at the University of Washington[cite: 7, 8]. [cite_start]I am adept at developing audit programs, reporting data-driven findings to stakeholders, and managing remediation efforts in fast-paced, global enterprise environments[cite: 5].</p>
-                    [cite_start]<p>With a foundation in Computer Science and a specialization in Cybersecurity from Sushant University[cite: 9, 10], I am passionate about protecting information assets and strengthening security postures against emerging threats.</p>
-                    <h4>My Skills:</h4>
-                    <div class="skills-grid">
-                        [cite_start]<span>Risk Management [cite: 31]</span>
-                        [cite_start]<span>Security Compliance [cite: 31]</span>
-                        [cite_start]<span>Internal Audit [cite: 31]</span>
-                        [cite_start]<span>Threat Intelligence [cite: 31]</span>
-                        [cite_start]<span>ISO 27001 [cite: 33]</span>
-                        [cite_start]<span>PCI DSS 4.0 [cite: 33]</span>
-                        [cite_start]<span>NIST 800-53 [cite: 33]</span>
-                        [cite_start]<span>Python [cite: 31]</span>
-                        [cite_start]<span>OneTrust [cite: 32]</span>
-                        [cite_start]<span>Crowdstrike [cite: 32]</span>
-                        [cite_start]<span>AWS [cite: 32]</span>
-                        [cite_start]<span>JIRA [cite: 32]</span>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Hello, I'm Shlok Gupta.</h3>
+                        <p>I am a cybersecurity professional completing a Master's in Cybersecurity Engineering at the University of Washington. With a proven track record at companies like CSG International, I specialize in developing audit programs, creating data-driven reports, and managing remediation efforts in global enterprise environments.</p>
+                        <p>My goal is to leverage my expertise in security frameworks and compliance to help organizations build robust and resilient security postures.</p>
+                    </div>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="edu-item">
+                            <h4>University of Washington</h4>
+                            <p>Master's, Cybersecurity Engineering</p>
+                        </div>
+                        <div class="edu-item">
+                            <h4>Sushant University</h4>
+                            <p>Bachelor's, Computer Science (Cybersecurity Specialisation)</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="content-section">
-            <h2 class="section-title">My Projects & Experience</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="[LINK_TO_PROJECT_IMAGE_1]" alt="Screenshot of a compliance dashboard">
-                    <h3>Enterprise Security & Audit Program</h3>
-                    [cite_start]<p>As an Information Security Analyst at CSG International [cite: 12][cite_start], I developed audit procedures for 70+ controls, managed an IT risk register that cut security incidents by 35% [cite: 18][cite_start], and built a compliance dashboard that increased test coverage by 40%[cite: 19].</p>
-                    <div class="project-tags">
-                        [cite_start]<span>ISO 27001 [cite: 16][cite_start]</span><span>PCI DSS v4.0 [cite: 16][cite_start]</span><span>Risk Management [cite: 18]</span>
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Information Security Analyst</h3>
+                            <p class="company">CSG International | Aug 2022 - Present</p>
+                            <ul>
+                                <li>Developed and executed audit procedures for 70+ security controls aligning with ISO 27001 & PCI DSS.</li>
+                                <li>Reduced security incidents by 35% year-over-year by creating and managing an IT risk register.</li>
+                                <li>Increased control test coverage by 40% by building a dashboard to automate compliance tracking.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Case Study (Soon)</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                     <img src="[LINK_TO_PROJECT_IMAGE_2]" alt="GRC and Threat Intelligence graphic">
-                    <h3>GRC & Threat Intelligence Enhancements</h3>
-                    [cite_start]<p>During my internship at Safe Security [cite: 21][cite_start], I strengthened the data protection posture by 20% by executing risk assessments[cite: 23]. [cite_start]I also enhanced executive breach intelligence reports by 25% by analyzing data breach cases and IAM misconfigurations[cite: 24].</p>
-                    <div class="project-tags">
-                        [cite_start]<span>GRC [cite: 21][cite_start]</span><span>Threat Intelligence [cite: 21][cite_start]</span><span>Control Testing [cite: 31]</span>
-                    </div>
-                     <div class="project-links">
-                        <a href="#" target="_blank">Details (Soon)</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="[LINK_TO_PROJECT_IMAGE_3]" alt="Vulnerability analysis graphic">
-                    <h3>LightSpeed Cache Vulnerability PoC</h3>
-                    [cite_start]<p>I researched and published a Proof of Concept for a vulnerability identified as CVE-2020-29172 in the LightSpeed Cache plugin[cite: 40]. This project showcases my skills in vulnerability analysis and responsible disclosure.</p>
-                    <div class="project-tags">
-                        [cite_start]<span>Vulnerability Research [cite: 40][cite_start]</span><span>PoC [cite: 40][cite_start]</span><span>CVE [cite: 40]</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Publication</a>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>GRC & Threat Intel Intern</h3>
+                            <p class="company">Safe Security | July 2021 - Aug 2022</p>
+                            <ul>
+                                <li>Strengthened corporate data protection posture by 20% by executing risk assessments.</li>
+                                <li>Enhanced executive breach intelligence reports by 25% by analyzing data breach cases.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="content-section">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-text">I'm currently open to new opportunities and collaborations. My inbox is always open, whether you have a question or just want to say hi, I'll get back to you!</p>
-            [cite_start]<a href="mailto:shlokgupta261@gmail.com" class="btn btn-primary">Say Hello [cite: 2]</a>
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Core Skills & Certifications</h2>
+                <div class="skills-grid">
+                    <div>
+                        <h3>Technical Skills</h3>
+                        <p>Information Security, Security Compliance, Risk Management, Threat Intelligence, Internal Audit, Incident Response, Python, Java, AWS, SQL.</p>
+                    </div>
+                    <div>
+                        <h3>Frameworks</h3>
+                        <p>ISO 27001, PCI DSS 4.0, HIPAA, NIST 800-53, SOC Type 2, GDPR, FedRAMP.</p>
+                    </div>
+                    <div>
+                        <h3>Tools & Platforms</h3>
+                        <p>OneTrust, TCT, Crowdstrike, Automox, JIRA, Linux.</p>
+                    </div>
+                    <div>
+                        <h3>Certifications</h3>
+                        <p>ISO 27001 Lead Auditor, ISO 27701 Lead Auditor, CompTIA Security+, CompTIA A+.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <div class="social-links">
-            <a href="[YOUR_GITHUB_LINK]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/shlokgupta261/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <footer id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new opportunities and collaborations.</p>
+            <a href="mailto:shlokgupta261@gmail.com" class="btn btn-primary">shlokgupta261@gmail.com</a>
         </div>
-        <p>&copy; 2025 Shlok Gupta. [cite_start]All rights reserved. [cite: 1]</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shlok Gupta. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
