@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Typing Effect for Hero Section
-    const roles = ["a Software Developer", "a UI/UX Enthusiast", "a Creative Problem-Solver", "a Tech Innovator"];
+    const roles = [
+        "a Cybersecurity Engineer.",
+        "an Information Security Analyst.",
+        "a Risk Management Professional.",
+        "an ISO 27001 Lead Auditor."
+    ];
     let roleIndex = 0;
     let charIndex = 0;
     const typingElement = document.getElementById('typing-effect');
