@@ -1,23 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Prevent default anchor click behavior
-            e.preventDefault();
+    // Typing Effect
+    const roles = ["Security Compliance Expert", "Risk Management Specialist", "Cybersecurity Specialist"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    const typingElement = document.getElementById('typing-effect');
+    
+    function type() {
+        if (charIndex < roles[roleIndex].length) {
+            typingElement.textContent += roles[roleIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
 
-            // Get the target element's id from the href attribute
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+    function erase() {
+        if (charIndex > 0) {
+            typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50);
+        } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(type, 500);
+        }
+    }
+    type();
 
-            // Smoothly scroll to the target element
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Animate skill bars
+                if (entry.target.classList.contains('skill-bar')) {
+                    const barFill = entry.target.querySelector('.bar-fill');
+                    barFill.style.width = barFill.dataset.percent + '%';
+                }
             }
         });
-    });
+    }, { threshold: 0.1 });
+
+    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll, .skill-bar');
+    elementsToAnimate.forEach(el => observer.observe(el));
 });
